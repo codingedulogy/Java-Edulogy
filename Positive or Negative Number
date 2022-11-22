@@ -1,0 +1,97 @@
+Given an integer num input, the objective is to write a code to
+Check if a Given Number is Positive or Negative.
+Example
+Input : num = 11
+Output : Positive
+
+// Brute Force Approach
+import java.util.Scanner;
+
+public class CheckNum {
+    public static  void main(String [] args){
+        System.out.println("Please Enter any Number");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        if(num>0){
+            System.out.println("Entered Number is Positive");
+        }
+        else if(num<0){
+            System.out.println("Entered Number is Negative");
+        }
+        else{
+            System.out.println("Entered Number is Zero");
+
+        }
+    }
+}
+
+
+
+// Nested if-else Approach
+import java.util.Scanner;
+public class CheckNum2 {
+    public static void main(String [] args){
+        System.out.println("Please Enter any Number");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        if(num>=0){
+            if(num ==0){
+                System.out.println("Entered Number is Zero");
+            }
+            else{
+                System.out.println("Entered Number is Positive");
+
+            }
+        }
+        else{
+            System.out.println("Entered Number is Negative");
+        }
+    }
+}
+
+
+// Ternary Operator Approach
+import java.util.Scanner;
+
+public class CheckNum3 {
+    public static void main(String [] args){
+        System.out.println("Please Enter any Number");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        if(num == 0){
+            System.out.println("Entered number is Zero");
+        }
+        else{
+            String result = num>0 ? "Entered Number is Positive" : "Entered Number is Negative";
+            System.out.println(result);
+        }
+    }
+}
+
+
+
+// Functional Approach
+import java.util.Scanner;
+
+public class CheckNum4 {
+    static String NumberChecker(int num){
+        if(num>0){
+            return "Entered Number is Positive";
+        }
+        else if(num<0){
+            return "Entered Number is Negative";
+        }
+        else{
+            return "Entered Number is Zero";
+
+        }
+    }
+    public static  void main(String [] args){
+        System.out.println("Please enter any Number");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        System.out.println(NumberChecker(num));
+    }
+}
+
+
