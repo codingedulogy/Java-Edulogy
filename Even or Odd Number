@@ -1,0 +1,94 @@
+For a given integer input the objective is to write a Program to
+Check Whether a Number is Even or Odd
+Example
+Input : = 22
+Output : Even
+
+
+
+
+// Brute Force Approach
+import java.util.Scanner;
+
+public class EvenOrOdd {
+    public static void main(String [] args){
+        System.out.println("Please Enter any Number");
+        Scanner coding = new Scanner(System.in);
+        int num = coding.nextInt();
+        if(num % 2 == 0){
+            System.out.println("Entered Number is Even");
+        }
+        else{
+            System.out.println("Entered Number is Odd");
+
+        }
+
+    }
+
+}
+
+
+
+// Using Ternary Operator
+import java.util.Scanner;
+
+public class EvenOrOdd2 {
+    public static void main(String [] args){
+        System.out.println("Please Enter any Number");
+        Scanner coding = new Scanner(System.in);
+        int num = coding.nextInt();
+        String result = num %2==0? "Entered Number is Even" : "Entered Number is Odd";
+        System.out.println(result);
+    }
+}
+
+
+
+
+// Bitwise Operator Approach
+import java.util.Scanner;
+
+public class EvenOrOdd3 {
+    static boolean isEvenCheck(int num){
+        if((num ^ 1) == num+1){
+            return true;
+        }
+        else{
+            return  false;
+        }
+    }
+    public static void main(String [] args){
+        System.out.println("Please Enter any Number");
+        Scanner coding = new Scanner(System.in);
+        int num = coding.nextInt();
+        System.out.println(isEvenCheck(num)== true ? "Entered Number is Even" : "Entered Number is Odd");
+    }
+}
+
+
+
+// Functional Approach
+import java.util.Scanner;
+public class EvenOrOdd4 {
+
+    static String isEvenChecker(int num){
+        if(num%2==0){
+            return "Entered Number is Even";
+        }
+        else{
+            return "Entered Number is Odd";
+        }
+
+    }
+
+    public static void main(String [] args){
+        System.out.println("Please Enter any Number");
+        Scanner coding = new Scanner(System.in);
+        int num = coding.nextInt();
+        System.out.println(isEvenChecker(num));
+    }
+}
+
+
+
+
